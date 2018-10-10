@@ -21,4 +21,12 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+TO-DO
+- show
+- crear comentario anidado
+- estilos
+- idiomas
+- errores
+- revisar lo que sobra
+- test
+- Docu

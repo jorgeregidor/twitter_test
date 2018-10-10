@@ -1,0 +1,13 @@
+<div class="card new-comment">
+  <div class="card-body">
+    <%= form_with(model: comment, local: true) do |f| %>
+      <div class="form-group">
+        <%= f.text_area :body, autofocus: true, class: "form-control" %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit "Nuevo comentario", class: "btn btn-primary btn-block"%>
+      </div>
+    <% end %>
+  </div>
+</div>

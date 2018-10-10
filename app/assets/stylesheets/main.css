@@ -1,0 +1,48 @@
+.body-content{
+	max-width: 1048px;
+	margin: 30px auto;
+}
+
+.text-align-center{
+	text-align: center;
+}
+
+.color-white{
+	color: #ffffff;
+}
+
+
+.card.session{
+	max-width: 316px;
+	margin: 30px auto;
+}
+
+.card.session h2{
+	margin-bottom: 30px;
+}
+
+.session-link{
+	text-align: center;
+	font-size: 24px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.card.comment, .card.new-comment{
+	min-height: 120px;
+	margin: 5px 10px;
+}
+
+.card.new-comment{
+	min-height: 150px;
+	margin: 5px 10px;
+}
+
+.card.comment{
+	min-height: 120px;
+	margin: 5px 10px;
+}
+
+.card.comment:hover{
+	border-color: #007bff;
+}

@@ -1,0 +1,13 @@
+
+<%= render 'form', comment: @comment %>
+
+<% @comments.each do |comment| %>
+  <div class="card comment">
+    <div class="card-body">
+      <h5>@<%= comment.user.nick %></h5>
+      <div><%= comment.created_at %></div>
+      <p><%= comment.body %></p>
+    </div>
+  </div>
+<% end %>
+
