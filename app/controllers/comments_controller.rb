@@ -4,12 +4,10 @@ class CommentsController < ApplicationController
   before_action :new_comment, only: [:index, :show]
 
   def index
-    @new_comment = Comment.new
     @comments = Comment.paginate(:page => params[:page], :per_page => 10)
   end
 
   def show
-    @new_comment = Comment.new
     @new_comment.parent_id = @comment.id
     @comments = @comment.answers.paginate(:page => params[:page], :per_page => 10)
   end
