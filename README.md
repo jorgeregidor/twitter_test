@@ -35,14 +35,14 @@ $ rails db:migrate
 
 ## Run
 ```
-$ rails s.
+$ rails s
 ```
 Open "localhost:3000"
 
 ## Test
 
 ```
-$ bundle exec rspec.
+$ bundle exec rspec
 ```
 
 ## Contributing
