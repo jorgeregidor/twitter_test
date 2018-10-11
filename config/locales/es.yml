@@ -1,0 +1,22 @@
+es:
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              blank: " no puede estar vacio"
+              taken: "esta ocupado, elige otro"
+            nick:
+              blank: " no puede estar vacio"
+              taken: "esta ocupado, elige otro"
+            password:
+              blank: " no puede estar vacio"
+              to_short: " es demasiado corto"
+            password_confirmation:
+              confirmation: "debe ser igual que password" 
+        comment:
+          attributes:
+            body:
+              blank: " no puede estar vacio"
+              to_long: " es demasiado largo"

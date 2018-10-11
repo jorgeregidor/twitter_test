@@ -1,0 +1,14 @@
+<div class="card comment">
+	<%= link_to(comment_path(comment.id)) do%>
+		<div class="card-body">
+			<h5 class="card-title">@<%= comment.user.nick %></h5>
+			<p class="card-text"><%= comment.body %></p>
+		</div> 
+	<% end %>
+	<div class="card-info">
+		<h6 class="card-subtitle mb-2 text-muted"><%= comment.created_at.strftime("%d/%m/%d %H:%M:%S") %></h6> 
+		 <% if not comment.parent_id.blank?%>
+		 		<span><%=link_to " Respuesta a este comentario", comment_path(comment.parent_id)%></span>
+		 <% end %>
+	</div>
+</div>

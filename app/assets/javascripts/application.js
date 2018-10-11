@@ -17,3 +17,22 @@
 //= require popper
 //= require bootstrap
 //= require_tree .
+
+
+
+$( document ).on("turbolinks:load", () => {
+
+	$("#comment_body").on("change keyup paste", (event) => {
+			count = event.target.value.length
+			$("#count").html(count)
+
+			if (count==0 || count>140) { 
+				$("#commit").attr("disabled","disabled") 
+				$(".counter").css('color', 'red');
+			}
+			else{
+				$("#commit").removeAttr("disabled");    
+				$('.counter').css('color', 'black');
+			}
+	});
+});

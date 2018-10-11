@@ -10,21 +10,12 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-primary ">
-      <a class="navbar-brand" href="#">Twitter-Test</a>
-      <% if user_signed_in? %>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarText">
-          <span class="navbar-text color-white">
-            <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
-          </span>
-        </div>
-      <% end -%>
-    </nav>
+    <%= render 'layouts/nav'%>
     <div class="body-content">
+      <%= render 'layouts/error'%>
       <%= yield %>
     </div>   
   </body>
 </html>
+
+

@@ -1,13 +1,11 @@
 
-<%= render 'form', comment: @comment %>
+<%= render 'form', comment: @new_comment %>
 
 <% @comments.each do |comment| %>
-  <div class="card comment">
-    <div class="card-body">
-      <h5>@<%= comment.user.nick %></h5>
-      <div><%= comment.created_at %></div>
-      <p><%= comment.body %></p>
-    </div>
-  </div>
+  <%= render 'comment', comment: comment %>
 <% end %>
+
+<%= will_paginate @comments, previous_label: "Anterior", next_label: "Siguiente", class: "apple_pagination" %>
+
+
 

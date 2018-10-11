@@ -1,0 +1,18 @@
+<% flash.each do |key, value| %>
+    <%if key == "error" or key == "alert" %>
+        <% if value.class == Array %>
+            <div class="alert alert-dismissable alert-danger">
+                <button type="button" class="close" data-dismiss="alert">×</button>
+                <% value.each do |message| %>  
+                    <%= message %>
+                    </br>
+                <% end %>
+            </div>
+        <% else %>
+            <div class="alert alert-dismissable alert-danger">
+                <button type="button" class="close" data-dismiss="alert">×</button>
+                <%= value %>
+            </div>
+        <% end %>
+    <% end %>
+<% end %>

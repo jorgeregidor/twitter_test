@@ -1,14 +1,9 @@
-<p id="notice"><%= notice %></p>
+<%= render 'comment', comment: @comment %>
+<%= render 'form', comment: @new_comment %>
 
-<p>
-  <strong>Body:</strong>
-  <%= @comment.body %>
-</p>
+<% @comments.each do |comment| %>
+  	<%= render 'comment', comment: comment %>
+<% end %>
 
-<p>
-  <strong>User:</strong>
-  <%= @comment.user %>
-</p>
+<%= will_paginate @comments, previous_label: "Anterior", next_label: "Siguiente", class: "apple_pagination" %>
 
-<%= link_to 'Edit', edit_comment_path(@comment) %> |
-<%= link_to 'Back', comments_path %>
